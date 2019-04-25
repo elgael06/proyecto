@@ -24,3 +24,5 @@ def login(request):
 
 def about(request):
     return render(request, 'photos/about/index.html', {})
+
+

@@ -1,7 +1,31 @@
 
-
 {% extends "index.html" %}
 {% block content %}
-     <h1>Iniciar Sesion.</h1>
-
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'src/css/login.css' %}"/>
+    
+     <div class="panel panel-default"> 
+          <div class="panel-heading">
+                <h1>Iniciar Sesion.</h1>
+          </div>
+          <div class="panel-body" id="contenido">
+               <div class="form control entradas">
+                    <label>Nombre</label>
+                      <input type="text"
+                         v-model="usuario"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre...">
+                      <small id="helpId" class="form-text text-muted">Help text</small>
+               </div>
+               <div class="form control entradas">
+                    <label>Password</label>
+                      <input type="Password"
+                         v-model="password"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password...">
+                      <small id="helpId" class="form-text text-muted">Help text</small>
+               </div>
+               <input name="" id="" v-on:click="enviar"  class="btn btn-primary entradas" type="button" value="Entrar">
+          </div>
+     </div>
+     
+    <script type="text/javascript" src="{% static 'src/js/login/main.js' %}" ></script>
 {% endblock %}
