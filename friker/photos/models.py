@@ -28,3 +28,4 @@ class Usuario(models.Model):
     nombre_completo = models.CharField(max_length=150)
     password = models.CharField(max_length=150)
     foto = models.CharField(max_length=150000)
+    

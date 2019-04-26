@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from friker.settings import STATIC_URL
-
+from .models import Usuario
 
 def home(request):
     accesos = [
@@ -26,3 +26,6 @@ def about(request):
     return render(request, 'photos/about/index.html', {})
 
 
+def  usuarios(request):
+    usuarios = Usuario.objects.all()
+    return render(request, 'photos/usuarios/index.html',{'usuarios' : usuarios})
